@@ -1,0 +1,43 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/EaselPlugin.min.js"
+    integrity="sha512-xMXd/xOvo+ENebK/hyshpBQjBfM0SqcXuz8rpu6wWuch4y/SssE6orNj7PhByizJc/GQFqPxtMr4oEMKedb8PA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+</head>
+
+<body onload="init();">
+<div>
+  <canvas id="demoCanvas" width="1000" height="400"></canvas>
+</div>
+<div>
+  <svg id="demosvg" width="1000" height="750">
+    <polygon stroke="none" fill="red" style="opacity: 0.6;" points="500 250,498 407,164 404 ,158 240,162 66,353 70 ,516 69,499 249"></polygon>
+  </svg>
+</div>
+
+ 
+  <script>
+     
+     let animations = anime({
+      targets: '#demosvg polygon',
+      points: [
+        { value: '500 250,498 407,164 404 ,158 240,162 66,353 70 ,516 69,499 249' },
+        { value: '563 376,436 283,247 474,320 250,162 66,412 184,561 22,562 376 ' }
+      ],
+      easing: 'easeOutQuad',
+      duration: 1500,
+      loop: true,
+      opacity:0.8,
+      direction: 'alternate'
+
+    });
+  </script>
+
+</body>
+
+</html>
